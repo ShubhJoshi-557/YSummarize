@@ -3,7 +3,8 @@ A chrome extension that summarizes a youtube video's transcript in a couple of l
 
 # Screenshots
 
-![image](https://user-images.githubusercontent.com/62555809/134205233-89cffb32-0b75-4b9c-851b-9d4fcb40d16f.png)
+![image](https://user-images.githubusercontent.com/62555809/134205233-89cffb32-0b75-4b9c-851b-9d4fcb40d16f.png) ![image](https://user-images.githubusercontent.com/62555809/134206272-192cd9e9-a6ef-4e64-8192-54ffd4c3be31.png)
+
 
 ![image](https://user-images.githubusercontent.com/62555809/134205268-c497d716-f2ae-4037-8809-9f6f758049e1.png)
 
