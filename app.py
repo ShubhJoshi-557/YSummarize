@@ -4,8 +4,6 @@ import datetime
 from youtube_transcript_api import YouTubeTranscriptApi
 import json
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-# from transformers import pipeline
-
 
 # define a variable to hold you app 
 app = Flask(__name__)
@@ -37,21 +35,6 @@ def summarize():
         for i in transcript_json:
             transcript_text += " " + i['text']
 
-        # summarizer = pipeline('summarization')
-        # num_iters = int(len(transcript_text)/1000)
-        # summarized_text = []
-        # for i in range(0, num_iters + 1):
-        #     start = 0
-        #     start = i * 1000
-        #     end = (i + 1) * 1000
-        #     out = summarizer(transcript_text[start:end])
-        #     out = out[0]
-        #     out = out['summary_text']
-        #     summarized_text.append(out)
-        #     summary = ""
-        #     for i in summarized_text:
-        #         summary += " " + i
-    #======================================================================================================================
         model = T5ForConditionalGeneration.from_pretrained("t5-base")
         tokenizer = T5Tokenizer.from_pretrained("t5-base")
         inputs = tokenizer.encode("summarize: " + transcript_text, return_tensors="pt", max_length=512, truncation=True)
